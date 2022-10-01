@@ -1,0 +1,71 @@
+<!-- BEGIN header -->
+
+<header class="header">
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-between">
+      <nav class="navbar navbar-expand-lg ">
+        <div class="container px-0">
+          {{ .Scratch.Set "img" .Site.Params.logo }} 
+		  {{ .Scratch.Set "logo_w" 197 }}
+		  {{ .Scratch.Set "logo_h" 71 }}
+		  {{- partial "_logo.html" . -}}
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+          <svg class="icon" width="20" height="20">
+            <use xlink:href="#menu"></use>
+          </svg>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              {{ range .Site.Menus.header }} {{ if .HasChildren }}
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  {{ .Name }}
+                </a>
+
+                <ul class="dropdown-menu">
+                  {{ range .Children }}
+                  <li>
+                    <a class="dropdown-item" href="{{ .URL | relLangURL }}"
+                      >{{ .Name }}</a
+                    >
+                  </li>
+                  {{ end }}
+                </ul>
+              </li>
+              {{ else }}
+              <li class="nav-item">
+                <a class="nav-link" href="{{ .URL | relLangURL }}"
+                  >{{ .Name }}</a
+                >
+              </li>
+
+              {{ end }}
+			  {{ end }}
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+<!-- END header -->
+
+{{ if ne .IsHome true }} 
+{{ end }}

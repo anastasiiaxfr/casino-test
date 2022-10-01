@@ -1,0 +1,38 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ if $data.faq.faq }}
+{{ with $data.faq.faq }}
+
+
+<section class="section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto text-center">
+                <h2>FAQ</h2>
+
+
+                <div class="accordion mt-5">
+                    {{ range $index, $el  := .items }}
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading-test{{$index}}">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-test{{$index}}" aria-expanded="true" aria-controls="collapse-test{{$index}}">
+                         {{ .title }}
+                        </button>
+                      </h2>
+                      <div id="collapse-test{{$index}}" class="accordion-collapse collapse" aria-labelledby="heading-test{{$index}}" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          {{ .desc }}
+                        </div>
+                      </div>
+                    </div>
+                    {{ end }}
+                    
+                  </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ end }}
+{{ end }}

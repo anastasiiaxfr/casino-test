@@ -1,0 +1,29 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+{{ if $data.homepage.section_info }}
+{{ with $data.homepage.section_info }}
+
+
+<section class="section pt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 content">
+                {{ range .paragraphs }}
+                <h2 id="{{ .title }}">{{ .title }}</h2>
+                <div>{{ .desc }}</div>
+                {{ end }}
+
+            </div>
+            <aside class="col-lg-4">
+                <nav class="toc">
+                {{ range .paragraphs }}
+                    <a href="#{{ .title }}">{{ .title }}</a>
+                {{ end }}
+                </nav>
+            </aside>
+        </div>
+    </div>
+</section>
+
+{{ end }}
+{{ end }}

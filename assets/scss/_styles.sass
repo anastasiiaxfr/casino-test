@@ -1,0 +1,202 @@
+.footer, .header, .hero
+    +theme(dark)
+body
+    +theme(light)
+
+.divider
+    width: 80%
+    height: 2px
+    margin: 0 auto 30px
+    background: radial-gradient(transparent 20%,#0094FF, transparent 80%)
+    border: none
+    background-repeat: no-repeat
+
+
+.section
+    +ft(14, 21, 400, $ffText)
+    
+    .content
+        h2
+            margin-bottom: 20px
+            margin-top: 40px
+            &::before
+                content: '|'
+                padding-right: 10px
+            &:last-of-type
+                &::before
+                    content: normal
+
+.accordion
+    &-item
+        background-color: transparent
+        //border: 2px solid $blue-dark
+    &-button
+        border-radius: 4px
+        background-color: transparent
+        border: 2px solid $blue-dark
+        color: $blue-dark
+        &:not(.collapsed)
+            background-color: transparent
+            box-shadow: none
+            color: inherit
+            border-color: inherit
+            
+        &:focus
+            background-color: transparent
+            box-shadow: none
+            border: 2px solid $blue
+            color: $blue
+
+    &-item
+        margin: 25px auto
+        border: none
+    &-header
+        button
+            +ft(18, 18*1.3, 600, $ffHeading)
+    &-body
+        text-align: left
+        border: 2px solid $blue
+        border-top: 0
+
+.toc
+    max-width: 304px
+    margin-left: auto
+    margin-right: auto
+    a
+        color: inherit
+        display: block
+        width: auto
+        margin: 10px auto
+        padding: 10px 15px
+        border: 2px solid $main
+        border-radius: 4px
+        +ft(16, 16*1.2, 700, $ffHeading)
+        &:hover, &.active
+            border-color: $orange
+            color: $orange
+
+.soc
+    margin: 5px 0
+    a
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        width: 43px
+        height: 43px
+        padding: 5px
+        margin-right: 10px
+        border-radius: 50%
+        border: 1px solid $blue2
+        color: $grey3
+        &:last-of-type
+            margin-right: 0
+        &:hover
+            color: $blue
+            border-color: $blue
+
+.casino
+    width: 100%
+    margin-left: auto
+    margin-right: auto
+    +ft(16, 16, 500, $ffText)
+    color: $grey2
+    border: 1px solid $blue
+    border-radius: 4px
+    padding: 15px
+    &__excerpt, &__date, &__rating
+        +ft(14, 21, 400, $ffText)
+        color: $grey2
+        b
+            color: $white
+    &__details-toggle
+        display: block
+        margin: 15px auto
+        text-align: center
+    &__parent
+        
+        td
+            padding: 5px 0
+    td
+        padding: 5px 0
+    .text--main
+        color: $blue
+        text-decoration: underline
+        font-weight: 500
+        
+    &__logo
+        border-radius: 6px
+        width: 100%
+        margin: 10px auto
+    &__rating
+        display: inline-flex
+        align-items: center
+      
+        
+        .rating
+            margin-left: 5px
+            margin-right: 5px
+    &__title
+        +ft(26, 26, 700, $ffHeading)
+    &__feature
+        margin: 20px 0 0
+        padding: 0
+        li
+            list-style-type: none
+            margin: 10px 0
+    &__games
+        max-width: 708px
+        padding: 0
+        margin-top: 10px
+        margin-bottom: 30px
+        overflow-x: scroll
+        @extend %scroll
+        li
+            display: inline-flex
+            align-items: center
+            padding: 5px 10px
+            margin: 5px
+            border: 1px solid $blue
+            border-radius: 4px
+            +ft(16, 16, 400, $ffText)
+            cursor: pointer
+            svg
+                margin-right: 5px
+    .pm
+        max-width: 708px
+        padding: 0
+        margin-top: 10px
+        margin-bottom: 30px
+        overflow-x: scroll
+        @extend %scroll
+        li
+            list-style-type: none
+            display: inline-flex
+            margin: 5px
+            img
+                display: block
+                object-fit: contain
+
+    &__details
+        +ft(16, 16, 400, $ffText)
+        color: $grey2
+        &-title
+            +ft(22, 22, 600, $ffHeading)
+            color: $grey2
+            & + b
+                +ft(22, 22, 600, $ffHeading)
+                color: $orange
+
+.hero
+    position: relative
+    background-repeat: no-repeat
+    background-position: 2% center
+    &__bg
+        position: absolute
+        width: 100%
+
+.navbar
+    width: 100%
+
+.bg
+    &--1
+        background: url('../images/coin2.png')  80% 50% no-repeat

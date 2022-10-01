@@ -1,0 +1,43 @@
+<!-- Footer -->
+<!--Main Footer-->
+<footer class="footer">
+    <div class="footer__bg">
+        <img src="{{`../images/footer.svg`| relURL }}" alt="ALT">
+    </div>
+    
+    <div class="container">
+        <hr class="divider">
+        <div class="d-flex align-items-center justify-content-between flex-wrap">
+              
+                {{ .Scratch.Set "logo_mode" "white" }}
+                {{ .Scratch.Set "logo_w" "197" }}
+                {{ .Scratch.Set "logo_h" "71" }}
+                {{- partial "_logo.html" . -}}
+            
+
+                <ul class="footer__nav order-1">
+                    {{ range .Site.Menus.footer }}
+
+                    <li>
+                        <a href="{{ .URL | relURL }}">
+                            {{ .Name }}
+                        </a>
+                    </li>
+
+
+                    {{ end }}
+                </ul>
+
+                <nav class="soc my-4 order-lg-1">
+                    {{ range .Site.Params.share }}
+                    <a href="{{.link}}" title="{{ .title }}"><i class="{{ .icon }}"></i></i></a>
+                    {{ end }}
+                </nav>
+           
+       
+           
+        </div>
+    </div>
+</footer>
+<!--Main Footer-->
+

@@ -1,0 +1,194 @@
+baseURL = "/"
+canonifyURLs = true
+defaultContentLanguage = "ua"
+disableLanguages = []
+languageCode = "ua"
+paginate = "6"
+relativeURLs = true
+summaryLength = "50"
+title = "casino online"
+# [Languages.en]
+# contentDir = "content/en"
+# home = "Home"
+# languageCode = "en-us"
+# languageName = "En"
+# weight = 3
+[Languages.ru]
+contentDir = "content/ru"
+home = "Главная"
+languageCode = "ru"
+languageName = "Ру"
+weight = 2
+[Languages.ua]
+contentDir = "content/ua"
+home = "Головна"
+languageCode = "ua"
+languageName = "Укр"
+weight = 1
+
+[[menu.footer]]
+URL = "#"
+name = "Cookie Policy"
+weight = 1
+[[menu.footer]]
+URL = "#"
+name = "Privacy Policy"
+weight = 2
+[[menu.footer]]
+URL = "#"
+name = "Terms & Conditions"
+weight = 3
+[[menu.footer]]
+URL = "#"
+name = "Sitemap"
+weight = 4
+
+
+
+[[menu.header]]
+URL = "#"
+name = "Online casinos in Belarus"
+weight = 1
+hasChildren = true
+
+[[menu.header]]
+name="Online casinos in Belarus 1"
+parent = "Online casinos in Belarus"
+URL = "Online casinos in Belarus 1"
+weight = 1
+[[menu.header]]
+name="Online casinos in Belarus 2"
+parent = "Online casinos in Belarus"
+URL = "Online casinos in Belarus 2"
+weight = 2
+
+[[menu.header]]
+URL = "#"
+name = "Slots"
+weight = 2
+hasChildren = true
+
+[[menu.header]]
+parent = "Slots"
+name = "Slots1"
+URL = "casinos1"
+weight = 1
+[[menu.header]]
+parent = "Slots"
+name = "Slots2"
+URL = "casinos2"
+weight = 2
+
+[[menu.header]]
+URL = "#"
+name = "All games"
+weight = 3
+hasChildren = true
+
+[[menu.header]]
+parent = "All games"
+name = "All casinos1"
+URL = "casinos"
+weight = 1
+[[menu.header]]
+parent = "All games"
+name = "All casinos2"
+URL = "casinos"
+weight = 2
+
+[[menu.header]]
+URL = "#"
+name = "Bonus"
+weight = 4
+hasChildren = true
+
+[[menu.header]]
+parent = "Bonus"
+name = "All casinos2"
+URL = "casinos"
+weight = 1
+[[menu.header]]
+parent = "Bonus"
+name = "All casinos1"
+URL = "casinos"
+weight = 2
+
+[[menu.header]]
+URL = "#"
+name = "Payment methods"
+weight = 5
+hasChildren = true
+
+[[menu.header]]
+parent = "Payment methods"
+name = "All casinos"
+URL = "casinos"
+weight = 1
+[[menu.header]]
+parent = "Payment methods"
+name = "All casinos"
+URL = "casinos"
+weight = 2
+
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+[params]
+CIO_site_id = "XXX"
+GTM = "GTM-WHBQ3BV"
+description = ""
+develop = "xfr"
+email = "join.commercial@gmail.com"
+home = "Home"
+logo = "/images/logo.svg"
+logo_dark = "/images/logo_dark.svg"
+logo_w = "101"
+mobile = "(097) 875 12 43"
+
+tm_id = "-587397444"
+tm_token = "2045157225:AAFQjtb_C69OrQqaXjNLnpODfFy01tIe1Lg"
+
+[[params.plugins.js]]
+link = "plugins/js/bootstrap.bundle.min.js"
+[[params.plugins.js]]
+link = "plugins/js/jquery.min.js"
+
+# [[params.plugins.css]]
+# URL = "plugins/icon/themify-icons/themify-icons.css"
+
+[[params.share]]
+title = "facebook"
+icon = "fa-brands fa-facebook-f" 
+link = "#"
+
+[[params.share]]
+title = "youtube"
+icon = "fa-brands fa-youtube" 
+link = "#"
+
+[[params.share]]
+title = "twitter"
+icon = "fa-brands fa-twitter" 
+link = "#"
+
+[[params.share]]
+title = "telegram"
+icon = "fa-brands fa-telegram" 
+link = "#"
+
+
+
+
+[params.preloader]
+enable = true
+preloader = ""
+[sitemap]
+ChangeFreq = "daily"
+Priority = 0.6
+Weight = [["main", "1"], ["sub2", "0.8"], ["sub3", "0.6"]]
+enableRobotsTXT = true
+[taxonomies]
+author = "authors"
+category = "categories"
+tag = "tags"
+
